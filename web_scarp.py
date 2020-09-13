@@ -34,5 +34,6 @@ print(soup.find(id='any_id'))
 print(soup.get_text()) # get all text from webpage
 print(BeautifulSoup("<html><head></head><body>Hello there </body></html>")) # instead of link taking data from string 
 print(soup.a.attrs) # returns dic of attributes
+print(soup.select('h a')) # here select <a> of <h> 
 
 
