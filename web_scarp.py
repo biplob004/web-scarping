@@ -2,9 +2,12 @@
 from bs4 import BeautifulSoup
 import requests
 
+cookie='####################################'
+user_agent = 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
+headers = {'Cookie': cookie, 'user-agent':user_agent}
 url = 'http://example.com' # Here is full url of the page you want to scarp
 
-r = requests.get(url) # request the page 
+r = requests.get(url, headers=headers) # request the page 
 
 data = r.content # get content of the page
 
